@@ -1,0 +1,64 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+# For a complete reference, please see the online documentation at
+# https://docs.vagrantup.com.
+
+Vagrant.configure("2") do |config|
+  ##
+  # Vagrant Box base image
+  #
+  # VM image build history -> https://app.vagrantup.com/ubuntu/boxes/xenial64
+  ##
+  config.vm.box = "ubuntu/xenial64"
+  config.vm.box_version = "20170616.0.0"
+  config.vm.box_check_update = false
+
+  ##
+  # Network configurations
+  ##
+
+  # Access to VM port 80 as localhost:8080
+  # config.vm.network "forwarded_port", guest: 80, host: 8080
+
+  # Reach VM as an specific private IP
+  config.vm.network "private_network", ip: "192.168.7.10"
+
+  ##
+  # Shared volumes/directories
+  ##
+
+  # Share an additional folder to the guest VM. The first argument is
+  # the path on the host to the actual folder. The second argument is
+  # the path on the guest to mount the folder.
+  # config.vm.synced_folder "../data", "/vagrant_data"
+
+  ##
+  # VirtualBox VM customization
+  ##
+  config.vm.provider "virtualbox" do |vb|
+    vb.gui = false
+    vb.memory = "2048"
+  end
+
+  ##
+  # Provisioning
+  ##
+
+  # Copy all the provision files to /home/ubuntu/provision-files
+  config.vm.provision "file", source: "files", destination: "~/provision-files"
+
+  # Apply all the provision scripts, hardly coupled to the provision-files directory location
+  Dir.glob("scripts/*.sh") do |script|
+    config.vm.provision "shell", path: script
+  end
+
+  # Start CMS
+  # TODO: Create systemd services for each of this calls
+  config.vm.provision "shell", inline: <<EOS
+    cmsAdminWebServer 0 &
+    cmsRankingWebServer &
+    cmsLogService 0 &
+    cmsResourceService -a ALL 0 & # All excluding the admin, ranking and log service ¯\_(ツ)_/¯
+EOS
+
+end
