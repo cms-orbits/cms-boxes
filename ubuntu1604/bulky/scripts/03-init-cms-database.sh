@@ -1,6 +1,7 @@
 #!/bin/bash -ex
 
-readonly AS_USER=${1-ubuntu}
+readonly user=${DEFAULT_USER-$(whoami)}
+readonly AS_USER=${1-$user}
 
 # Adds cmsdb password and runs the migrations
 migrateSchema() {

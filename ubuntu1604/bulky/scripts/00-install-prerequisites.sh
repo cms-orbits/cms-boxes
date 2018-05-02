@@ -1,6 +1,7 @@
 #!/bin/bash -ex
 
-readonly SRCDIR=/home/ubuntu/provision-files
+readonly user=${DEFAULT_USER-$(whoami)}
+readonly SRCDIR=/home/$user/provision-files
 
 installReqs () {
   # Disable installing recommended or suggested packages

@@ -1,6 +1,7 @@
 #!/bin/bash -ex
 
-readonly SRCDIR=/home/ubuntu/provision-files
+readonly user=${DEFAULT_USER-$(whoami)}
+readonly SRCDIR=/home/$user/provision-files
 
 cp ${SRCDIR}/nginx/nginx.conf /etc/nginx
 cp ${SRCDIR}/nginx/upstreams-cms.conf /etc/nginx/conf.d

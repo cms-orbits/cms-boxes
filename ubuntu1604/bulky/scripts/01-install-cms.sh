@@ -1,9 +1,10 @@
 #!/bin/bash -ex
 
+readonly user=${DEFAULT_USER-$(whoami)}
 
 installCMS () {
   # TODO: Refactor this to be parametrizable
-  readonly AS_USER=${1-ubuntu}
+  readonly AS_USER=${1-$user}
   # There isn't a 1.4-rc1 yet, so I'm going to stick to this commit
   readonly CMS_REVISION=${2-f7ebce619b886cbdd4620123889860a908f4ca65}
 

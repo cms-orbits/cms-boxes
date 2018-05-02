@@ -1,7 +1,8 @@
 #!/bin/bash -ex
 
 readonly AS_USER=${1-postgres}
-readonly SRCDIR=/home/ubuntu/provision-files
+readonly user=${DEFAULT_USER-$(whoami)}
+readonly SRCDIR=/home/$user/provision-files
 
 initDBUser() {
   local pswd=${1-notsecure}

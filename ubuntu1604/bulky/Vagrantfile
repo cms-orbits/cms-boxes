@@ -44,21 +44,22 @@ Vagrant.configure("2") do |config|
   # Provisioning
   ##
 
-  # Copy all the provision files to /home/ubuntu/provision-files
+  # Copy all the provision files to /home/[default user]/provision-files
   config.vm.provision "file", source: "files", destination: "~/provision-files"
 
-  # Apply all the provision scripts, hardly coupled to the provision-files directory location
+  # Apply all the provision scripts.
+  # WARNING: The provision scripts are hardly coupled to the provision-files directory location
   Dir.glob("scripts/*.sh") do |script|
-    config.vm.provision "shell", path: script
+    config.vm.provision "shell", path: script, env: { DEFAULT_USER: "vagrant" }
   end
 
   # Start CMS
-  # TODO: Create systemd services for each of these calls
   config.vm.provision "shell", inline: <<EOS
-    cmsAdminWebServer 0 &
-    cmsRankingWebServer &
-    cmsLogService 0 &
-    cmsResourceService -a ALL 0 & # All excluding the admin, ranking and log service ¯\_(ツ)_/¯
+    # Start Admin, Ranking and Log services
+    systemctl start cms@AdminWebServer.service cms@RankingWebServer.service cms@LogService.service
+
+    # Start the other services (ex: Evalucation, Proxy, Scoring, Worker and Checker)
+    systemctl start cmsResourceManager.service
 EOS
 
 end
