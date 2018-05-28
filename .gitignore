@@ -1,2 +1,6 @@
+# VM's logs and metadata
 *.log
 .vagrant
+
+# Stuff
+Thumbs.db
