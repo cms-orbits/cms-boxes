@@ -45,7 +45,7 @@ contests.
 ### Initial data and database configurations
 
 The all-in-one VM already have a PostgreSQL service running, with the schema
-`cmsdbs` and user `cmsuser` ( password `unsecure`) in it.
+`cmsdb` and user `cmsuser` ( password `notsecure`) in it.
 
 The CMS database already comes with some initial data, as the default contest
 called `con_test`, **all** the tasks defined in this repository [cms-dev/con_test](https://github.com/cms-dev/con_test)
