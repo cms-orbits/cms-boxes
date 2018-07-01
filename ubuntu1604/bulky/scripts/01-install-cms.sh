@@ -5,8 +5,9 @@ readonly user=${DEFAULT_USER-$(whoami)}
 installCMS () {
   # TODO: Refactor this to be parametrizable
   readonly AS_USER=${1-$user}
-  # There isn't a 1.4-rc1 yet, so I'm going to stick to this commit
-  readonly CMS_REVISION=${2-f7ebce619b886cbdd4620123889860a908f4ca65}
+  # Latest commit in Jan 2018, which supports C# and Rust
+  # after that are too many breaking changes
+  readonly CMS_REVISION=${2-d930038459287d5d9858c16ee94340d248c37130}
 
   cd /home/${AS_USER}
 
@@ -19,6 +20,7 @@ installCMS () {
 
   cd /home/${AS_USER}/cms-src
   pip2 install -r requirements.txt
+  pip2 install psycopg2-binary
 
   # HEADS UP: Ignore setup.py install warning while extracting cms-1.4.dev0-py2.7.egg
   python2 setup.py install
