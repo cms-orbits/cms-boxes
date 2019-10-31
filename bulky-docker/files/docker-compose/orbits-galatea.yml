@@ -1,0 +1,11 @@
+version: '3'
+services:
+  cms:
+    image: cmsorbits/cms-galatea:0.2.0
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_DATASOURCE_USERNAME=cmsuser
+      - SPRING_DATASOURCE_PASSWORD=notsecure
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://$HOST_IP:5432/cmsdb
+

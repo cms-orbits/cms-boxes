@@ -1,0 +1,9 @@
+version: '3'
+services:
+  edge:
+    image: nginx:1.17
+    volumes:
+    - ./confs:/etc/nginx/conf.d:ro
+    - ./static:/usr/share/nginx/html:ro
+    ports:
+    - "80:80"

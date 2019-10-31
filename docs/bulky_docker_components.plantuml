@@ -1,0 +1,88 @@
+@startuml
+title CMS Orbits Integartion Environment
+
+skinparam monochrome true
+skinparam shadowing false
+skinparam linetype ortho
+
+node "bulky-docker" <<vm>> {
+
+    ' Datastorage
+    node PostgreSQL <<container>> {
+        database cmsDB {
+            artifact "cmsTables*"
+            artifact cmsOrbitsProfile
+        }
+    }
+
+    node MongoDB <<container>> {
+        database orbitsDB {
+            queue nesoQueue
+            artifact saoDB
+        }
+    }
+
+    ' CMS Components
+    rectangle "CMS" <<group>> {
+        node cmsAdminWebServer <<container>>
+        node cmsContestWebServer <<container>>
+        node cmsRankingWebServer <<container>>
+        node cmsEvaluationService <<container>>
+        node cmsScoringService <<container>>
+        node cmsWorker <<container>>
+
+        rectangle "Shared dependencies" {
+            node cmsLogService <<container>>
+            node cmsChecker <<container>>
+            node cmsResourceService <<container>>
+            node cmsProxyService <<container>>
+        }
+    }
+
+    ' CMS services Relationship
+    cmsAdminWebServer -- PostgreSQL
+    cmsContestWebServer -- PostgreSQL
+    cmsRankingWebServer ~~ cmsProxyService
+    cmsEvaluationService -- PostgreSQL
+    cmsScoringService -- PostgreSQL
+    cmsWorker -- PostgreSQL
+    cmsContestWebServer ~~ cmsEvaluationService
+    cmsContestWebServer ~~ cmsScoringService
+    cmsScoringService  ~~ cmsWorker
+    cmsEvaluationService  ~~ cmsWorker
+    ''' cmsLogService, cmsChecker, cmsResourceService and cmsProxyService skipt
+    ''' due visibility.
+
+
+    ' CMS Orbits Components
+    rectangle "CMS Orbits" <<group>> {
+        artifact "cms-frontend" as frontend
+        node Triton <<container>>
+        node Galatea <<container>>
+        node "user-admin" as uadmin <<container>>
+        node Sao <<container>>
+        node Neso <<container>>
+    }
+
+    Triton .. Galatea
+    Triton .. Sao
+    Sao -- MongoDB
+    Neso -- MongoDB
+    uadmin -- PostgreSQL
+    Galatea -- PostgreSQL
+    Sao -- PostgreSQL
+
+    ' Development edge proxy
+    interface "port 80" as port80
+    node "edge-nginx" as edge <<cotainer>>
+
+    ' Public endpoints
+    port80 .. edge
+    edge .. Triton : /api
+    edge .. uadmin : /user
+    edge .. frontend : /orbits
+    edge .. cmsAdminWebServer : /aws
+    edge .. cmsRankingWebServer : /rws
+    edge .. cmsContestWebServer : /
+}
+@enduml

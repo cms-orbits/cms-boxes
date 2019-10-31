@@ -1,0 +1,21 @@
+version: '3'
+services:
+  cms:
+    image: joelgtsantos/cmsusers:latest
+    ports:
+      - "8081:8081"
+    environment:
+      - CMS_DOMAIN=$HOST_IP
+      - CMS_PORT=8888
+      - CONTEST_SLUG=con_test
+      - SPRING_DB_ONE_DATASOURCE_USERNAME=cmsuser
+      - SPRING_DB_ONE_DATASOURCE_URL=jdbc:postgresql://$HOST_IP:5432/cmsdb
+      - SPRING_RABBITMQ_HOST=$HOST_IP
+      - SPRING_DB_ONE_DATASOURCE_PASSWORD=notsecure
+      - SPRING_RABBITMQ_USERNAME=cmsuser
+      - SPRING_RABBITMQ_PASSWORD=notsecure
+      - LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_SECURITY=INFO
+      # - SECURITY_GOOGLE_CLIENT_CLIENTID=
+      # - SECURITY_GOOGLE_CLIENT_CLIENTSECRET=
+      # - SECURITY_GITHUB_CLIENT_CLIENTID=
+      # - SECURITY_GITHUB_CLIENT_CLIENTSECRET=

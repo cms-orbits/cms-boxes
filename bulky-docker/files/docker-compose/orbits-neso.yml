@@ -1,0 +1,9 @@
+version: '3'
+services:
+  cms:
+    image: cmsorbits/cms-neso:0.3.3
+    environment:
+      - NESO_CMS_URL=http://$HOST_IP
+      - NESO_MONGO_USERNAME=cmsuser
+      - NESO_MONGO_PASSWORD=notsecure
+      - NESO_MONGO_HOST=$HOST_IP

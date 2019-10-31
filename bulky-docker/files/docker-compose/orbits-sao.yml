@@ -1,0 +1,15 @@
+version: '3'
+services:
+  cms:
+    image: cmsorbits/cms-sao:0.5.2
+    ports:
+      - "8083:8083"
+    environment:
+      - SAO_SERVER_PORT=8083
+      - SAO_CMS_DATASOURCE_NAME=cmsdb
+      - SAO_CMS_DATASOURCE_HOST=$HOST_IP
+      - SAO_CMS_DATASOURCE_USERNAME=cmsuser
+      - SAO_CMS_DATASOURCE_PASSWORD=notsecure
+      - SAO_DOCUMENTSOURCE_USERNAME=cmsuser
+      - SAO_DOCUMENTSOURCE_PASSWORD=notsecure
+      - SAO_DOCUMENTSOURCE_HOST=$HOST_IP

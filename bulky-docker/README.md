@@ -1,9 +1,9 @@
-# All-in-one VM (Bulky)
+# All-in-one VM w/Docker containers (bulky-docker)
 
 **tl;dr** After you propmt `vagrant up` in the terminal (within this folder as
 working directory), you should have a single virtual machine with [CMS](https://github.com/cms-dev/cms)
-and its dependencies up and running, reachable through the IPv4 address
-`192.168.7.10`. You will also be able to use the `admin:admin` administrator
+and its dependencies up and running as Docker container, reachable through the IPv4 address
+`192.168.7.11`. You will also be able to use the `admin:admin` administrator
 credentials alongside the `u1:p1`, `u2:p2` and `u3:p3` test users ones to hack
 around the platform.
 
@@ -12,8 +12,8 @@ around the platform.
 In order to spin up a all-in-one CMS box you only need to:
 
 ```shell
-git clone https://github.com/jossemarGT/cms-boxes.git
-cd cms-boxes/ubuntu1604/bulky
+git clone https://github.com/cms-orbits/cms-boxes.git
+cd cms-boxes/bulky-docker
 vagrant up
 ```
 
@@ -25,7 +25,7 @@ CMS services, its dependencies and some development tools are running inside
 the all-in-one virtual machine as systemd services each one using a specific
 port.
 
-![CMS all-in-one box topology](../../docs/img/cms_boxes_all_in_one_topology.png)
+![CMS all-in-one box topology](../docs/img/cms_boxes_all_in_one_topology.png)
 
 ## CMS
 
@@ -33,13 +33,13 @@ port.
 
 The Vagrant provisioning will generate an administrative user with username
 and password `admin`, which can be used to log into the *CMS Admin Web Server*
-(using the <http://192.168.7.10/aws> URL) and manage the platform.
+(using the <http://192.168.7.11/aws> URL) and manage the platform.
 
 Also the provisioned platform should contain three test users with username
 `u` followed by its serial number starting from `1`, and a password that
 follows the same patter using the letter `p` as prefix. For example the first
 user credentials are `u1:p1`. These test users are not assigned to any contest
-yet. Each of them can log into the <http://192.168.7.10/con_test> sample
+yet. Each of them can log into the <http://192.168.7.11/con_test> sample
 contests.
 
 ### Initial data and database configurations
@@ -48,12 +48,13 @@ The all-in-one VM already have a PostgreSQL service running, with the schema
 `cmsdb` and user `cmsuser` ( password `notsecure`) in it.
 
 The CMS database already comes with some initial data, as the default contest
-called `con_test`, **all** the tasks defined in this repository [cms-dev/con_test](https://github.com/cms-dev/con_test)
-and the users mentioned above.
+called `con_test`, **all** the tasks defined in this repository
+[cms-dev/con_test(https://github.com/cms-dev/con_test) and the users mentioned
+above.
 
 ### Running services and configurations
 
-As mentioned in the [documentation](https://cms.readthedocs.io/en/v1.3/Introduction.html#services),
+As mentioned in the [documentation](https://cms.readthedocs.io/en/latest/Introduction.html#services),
 CMS is conformed from a set of python process running as services, each of
 them are using the default configuration in this VM (except for the Printing
 service that was disabled on purpose). The service, RCP/HTTP port and nginx
@@ -62,11 +63,11 @@ route arregement is:
 CMS Service | RPC Port | HTTP Port | NGINX route
 ---|---|---|---
 ContestWebServer | 21000 | 8888 | /
-AdminWebServer | 21100 | 8089 | /aws
+AdminWebServer | 21100 | 8889 | /aws
 RankingService | N/A | 8890 | /rws
 Checker | 22000 | N/A | N/A
 EvaluationService | 25000 | N/A | N/A
-PrintingService (disabled) | 25123 | N/A | N/A
+PrintingService **disabled** | 25123 | N/A | N/A
 Worker | 26000 | N/A | N/A
 ResourceService |28000 | N/A | N/A
 ScoringService | 28500 | N/A | N/A
@@ -82,8 +83,6 @@ The VM comes with several users, but the ones that could be handy are:
 User | UID | GUID | Home
 -----|-----|------|-----
 root | 0 | 0 | /root
-postgres | 112 | 118 | /var/lib/postgresql
-cmsuser | 999 | 999 | /home/cmsuser
 vagrant | 1000 | 1000 | /home/vagrant
 ubuntu | 1001 | 1001 | /home/ubuntu
 
@@ -98,19 +97,15 @@ through MonitorService defined in the `cmsResourceManager.service`
 
 Package | Purpose | Related package(s)
 --------|---------|-------------------
-python2.7 | CMS hard dependency | iso-codes shared-mime-info cgroup-lite  python-pip libpq-dev libyaml-dev libffi-dev libcups2-dev libcap-dev
-postgresql | CMS Database | postgresql-client
+docker | Container engine that manages all the CMS applications | docker-compose
 openjdk-8-jre | CMS programming language support | openjdk-8-jdk gcj-jdk
-php7.0-cli | CMS programming language support | php7.0-fpm fpc
+php7.2-cli | CMS programming language support | php7.2-fpm fpc
 haskell-platform | CMS programming language support| N/A
 rustc | CMS programming language support | N/A
 mono-mcs | CMS programming language support | N/A
-nginx | CMS HTTP load balancing / service routing | N/A
-phppgadmin | PostgreSQL UI for development (Reachable through <http://192.168.7.10/phppgadmin>) | N/A
 
 ## Considerations
 
 The all in one configuration goes against the CMS-dev recommendations, mostly
-mixing Core services, workers and database hosts together. I opted to use this
-distribution for convenience and reverse engineering purposes (hack around
-:octocat:).
+mixing Core services, workers and database hosts together. This distribution was
+used for convenience and reverse engineering purposes (hack around :octocat:).

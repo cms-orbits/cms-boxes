@@ -1,0 +1,9 @@
+version: '3'
+services:
+  cms:
+    image: cmsorbits/cms:20180130
+    command: cmsWorker 0 -c ALL
+    network_mode: host
+    privileged: true # Since it spins bare containers
+    environment:
+      CMS_DB_PSWD: notsecure

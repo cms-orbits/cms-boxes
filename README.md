@@ -21,11 +21,11 @@ and [Vagrant](https://www.vagrantup.com/docs/installation/) installed in your
 host machine, then you can clone this repository and use any of the
 provisioning strategy **flavors** and network topology.
 
-For example to spin up  a **simple all-in-one(bulky) instance** you need to:
+For example to spin up a **all-in-one (bulky) instance** you need to:
 
 ```shell
-git clone https://github.com/jossemarGT/cms-boxes.git
-cd cms-boxes/ubuntu1604/bulky
+git clone https://github.com/cms-orbits/cms-boxes.git
+cd cms-boxes/bulky
 vagrant up
 ```
 
@@ -35,14 +35,13 @@ Each *flavor* is determined by the tools that are being used to provision the
 environment and the network topology, the ones you could find in this
 repository are:
 
-- All-in-one host, shell script provision -> `ubuntu1604/bulky`
-- Distributed hosts, shell script provision -> TODO
+- All-in-one host, shell script provision -> `bulky`
+- All-in-one host using Docker containers, shell script provision -> `bulky-docker`
 - Distributed hosts, Ansible provision -> TODO
 
-**Note**: All the virtual machines created by this project comes from [Ubuntu
-16.04, v20170616.0.0](https://atlas.hashicorp.com/ubuntu/boxes/xenial64)
+**Note**: All the virtual machines created by this project comes from [Ubuntu](https://atlas.hashicorp.com/ubuntu/)
 public Vagrant box. You are free to change the Linux distribution and Box
-version as you please, but bear in mind that some packages may change names
+version as you please, but bear in mind that some packages may change their names
 and configurations from Linux distribution to other, therefore, the
 provisioning scripts should not work as expected.
 
