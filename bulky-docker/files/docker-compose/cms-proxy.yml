@@ -6,3 +6,4 @@ services:
     network_mode: host
     environment:
       CMS_DB_PSWD: notsecure
+      CMS_DB_HOST: postgres

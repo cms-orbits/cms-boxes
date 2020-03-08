@@ -1,12 +1,12 @@
 version: '3'
 services:
-  cms:
+  orbits:
     image: cmsorbits/cms-naiad:0.1.0
     ports:
       - "8084:8084"
     environment:
       - SERVER_PORT=8084
-      - SPRING_RABBITMQ_HOST=$HOST_IP
+      - SPRING_RABBITMQ_HOST=rabbit
       - SPRING_RABBITMQ_USERNAME=cmsuser
       - SPRING_RABBITMQ_PASSWORD=notsecure
       - LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_SECURITY=INFO

@@ -12,5 +12,4 @@ setupConf() {
 }
 
 setupConf
-systemctl enable compose@nginx
-systemctl start compose@nginx
+systemctl enable --now compose@nginx

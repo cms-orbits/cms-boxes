@@ -14,6 +14,3 @@ docker image pull postgres:9.5
 setupConf
 systemctl enable compose@postgresql
 systemctl start compose@postgresql
-
-# Allow postgresql to warm up
-sleep 30s

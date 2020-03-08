@@ -7,3 +7,6 @@ services:
     - ./static:/usr/share/nginx/html:ro
     ports:
     - "80:80"
+    extra_hosts:
+      - "orbits:192.168.7.11"
+      - "cms:192.168.7.12"

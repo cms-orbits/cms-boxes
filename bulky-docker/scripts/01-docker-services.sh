@@ -9,7 +9,7 @@ createHier() {
 }
 
 installDockerComposeServiceTemplate () {
-  local HOST_IP=$(hostname -I | cut -d' ' -f1)
+  local HOST_IP=$(hostname -I | cut -d' ' -f2)
   sed -i "s/127.0.0.1/$HOST_IP/" ${SRCDIR}/systemd/compose@.service
   cp ${SRCDIR}/systemd/compose@.service /etc/systemd/system/compose@.service
   systemctl daemon-reload

@@ -1,16 +1,16 @@
 version: '3'
 services:
-  cms:
+  orbits:
     image: joelgtsantos/cmsusers:latest
     ports:
       - "8081:8081"
     environment:
-      - CMS_DOMAIN=$HOST_IP
+      - CMS_DOMAIN=cms-orbtis.com
       - CMS_PORT=8888
       - CONTEST_SLUG=con_test
       - SPRING_DB_ONE_DATASOURCE_USERNAME=cmsuser
-      - SPRING_DB_ONE_DATASOURCE_URL=jdbc:postgresql://$HOST_IP:5432/cmsdb
-      - SPRING_RABBITMQ_HOST=$HOST_IP
+      - SPRING_DB_ONE_DATASOURCE_URL=jdbc:postgresql://postgres:5432/cmsdb
+      - SPRING_RABBITMQ_HOST=mongo
       - SPRING_DB_ONE_DATASOURCE_PASSWORD=notsecure
       - SPRING_RABBITMQ_USERNAME=cmsuser
       - SPRING_RABBITMQ_PASSWORD=notsecure

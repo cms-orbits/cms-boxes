@@ -12,6 +12,3 @@ setupConf() {
 setupConf
 systemctl enable compose@mongodb
 systemctl start compose@mongodb
-
-# Allow mongodb to warm up
-sleep 30s

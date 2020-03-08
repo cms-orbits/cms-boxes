@@ -12,5 +12,3 @@ setupConf
 systemctl enable compose@rabbitmq
 systemctl start compose@rabbitmq
 
-# Allow rabbitmq to warm up
-sleep 30s

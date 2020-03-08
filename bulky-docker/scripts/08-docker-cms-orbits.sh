@@ -6,6 +6,7 @@ readonly SRCDIR=/home/$user/provision-files
 setupOrbitsService() {
   mkdir -p /opt/compose/$1
   cp ${SRCDIR}/docker-compose/orbits-$1.yml /opt/compose/$1/docker-compose.yml
+  cp ${SRCDIR}/docker-compose/orbits-overrides.yml /opt/compose/$1/docker-compose.override.yml
 }
 
 fetchFrontendAssets() {
@@ -34,8 +35,7 @@ readonly orbits="triton \
 
 for container in ${orbits[@]}; do
   setupOrbitsService $container
-  systemctl enable compose@$container
-  systemctl start compose@$container
+  systemctl enable --now compose@$container
 done
 
 # CMS Orbits frontend
