@@ -5,7 +5,9 @@ services:
     ports:
       - "8082:8082"
     environment:
+      - SERVER_PORT=8082
       - SPRING_DATASOURCE_USERNAME=cmsuser
       - SPRING_DATASOURCE_PASSWORD=notsecure
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/cmsdb
+      - LOGGING_LEVEL_COM_JOSSEMARGT_CMSGALATEA=INFO
 

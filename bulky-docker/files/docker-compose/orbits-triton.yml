@@ -1,10 +1,7 @@
 version: '3'
 services:
   orbits:
-    image: joelgtsantos/cms-triton:latest
-    ports:
-      - "9000:9000"
-    environment:
-      - ZUUL_ROUTES_CMSUSERS_URL=http://$HOST_IP:8081
-      - ZUUL_ROUTES_GALATEA_URL=http://$HOST_IP:8082
-      - ZUUL_ROUTES_SAO_URL=http://$HOST_IP:8083
+    image: envoyproxy/envoy:v1.14.1
+    volumes:
+      - ./conf/api-gateway.yml:/etc/envoy/envoy.yaml
+    network_mode: host

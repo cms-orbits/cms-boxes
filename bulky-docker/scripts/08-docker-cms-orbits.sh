@@ -9,6 +9,17 @@ setupOrbitsService() {
   cp ${SRCDIR}/docker-compose/orbits-overrides.yml /opt/compose/$1/docker-compose.override.yml
 }
 
+setupOrbitsTriton() {
+  mkdir -p /opt/compose/triton/conf
+
+  cp ${SRCDIR}/docker-compose/orbits-triton.yml /opt/compose/triton/docker-compose.yml
+  cp ${SRCDIR}/docker-compose/orbits-overrides.yml /opt/compose/triton/docker-compose.override.yml
+
+  cp ${SRCDIR}/envoy/api-gateway.yml /opt/compose/triton/conf/api-gateway.yml
+
+  systemctl enable --now compose@$container
+}
+
 fetchFrontendAssets() {
   local version=${1-0.2.1}
   local nginx_dir=${2-/opt/compose/nginx/static}
@@ -19,7 +30,6 @@ fetchFrontendAssets() {
 }
 
 # CMS Orbits images/services
-docker image pull joelgtsantos/cms-triton:latest
 docker image pull joelgtsantos/cmsusers:latest
 docker image pull cmsorbits/cms-naiad:0.1.0
 docker image pull cmsorbits/cms-galatea:0.2.0
@@ -37,6 +47,9 @@ for container in ${orbits[@]}; do
   setupOrbitsService $container
   systemctl enable --now compose@$container
 done
+
+# CMS Orbits API Gateway
+setupOrbitsTriton
 
 # CMS Orbits frontend
 fetchFrontendAssets 0.2.1 /opt/compose/nginx/static
