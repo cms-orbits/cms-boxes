@@ -1,7 +1,7 @@
 version: '3'
 services:
   orbits:
-    image: joelgtsantos/cmsusers:latest
+    image: cmsorbits/cms-users:1.2
     ports:
       - "8081:8081"
     environment:

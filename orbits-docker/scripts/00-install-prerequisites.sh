@@ -16,11 +16,6 @@ installReqs () {
   # Add vagrant to docker group
   usermod -a -G docker vagrant
   usermod -a -G docker ubuntu
-
-  # Contest Languages (Workers' dependencies)
-  # apt-get install -y  gcc python python3 openjdk-8-jdk openjdk-11-jdk \
-  #                     php7.2-cli php7.2-fpm fpc \
-  #                     haskell-platform rustc mono-mcs
 }
 
 installReqs "$@"

@@ -21,7 +21,7 @@ setupOrbitsTriton() {
 }
 
 fetchFrontendAssets() {
-  local version=${1-0.2.1}
+  local version=${1-0.2.2}
   local nginx_dir=${2-/opt/compose/nginx/static}
   local tmp=$(mktemp -d '/tmp/XXXXX')
 
@@ -30,7 +30,7 @@ fetchFrontendAssets() {
 }
 
 # CMS Orbits images/services
-docker image pull joelgtsantos/cmsusers:latest
+docker image pull cmsorbits/cms-users:1.2
 docker image pull cmsorbits/cms-naiad:0.1.0
 docker image pull cmsorbits/cms-galatea:0.2.0
 docker image pull cmsorbits/cms-sao:0.5.2
@@ -52,4 +52,4 @@ done
 setupOrbitsTriton
 
 # CMS Orbits frontend
-fetchFrontendAssets 0.2.1 /opt/compose/nginx/static
+fetchFrontendAssets 0.2.2 /opt/compose/nginx/static

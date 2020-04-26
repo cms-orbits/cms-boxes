@@ -5,7 +5,7 @@
 
 Vagrant.configure("2") do |config|
   VM_IMAGE_NAME = "ubuntu/bionic64"
-  VM_IMAGE_VERSION = "20200304.0.0"
+  VM_IMAGE_VERSION = "20200429.0.0"
 
   (1..3).reverse_each do |i|
     vm_name = "node00#{i}"
@@ -56,21 +56,21 @@ Vagrant.configure("2") do |config|
         node.vm.provision "file", source: "files", destination: "~/provision-files"
 
         # Add nodes list to /etc/host file
-        node.vm.provision "shell", inline: <<EOS
+        node.vm.provision "shell", inline: <<~EOS
         { \
           echo '192.168.7.11 node001.cms-orbits.com node001 orbits edge'; \
           echo '192.168.7.12 node002.cms-orbits.com node002 cms'; \
           echo '192.168.7.13 node003.cms-orbits.com node003 postgres mongo rabbit'; \
         } >> /etc/hosts
-EOS
+        EOS
 
         # Apply all the provision scripts.
-        # WARNING: The provision scripts are hardly coupled to the provision-files directory location
+        # WARNING: The provision scripts are hardly coupled to the provision-files directory path
         provision_scripts = case i
         when 1 # Edge / Orbits
             %w(00-install-prerequisites.sh 01-docker-services.sh 05-docker-nginx-edge.sh 08-docker-cms-orbits.sh)
         when 2 # CMS
-            %w(00-install-prerequisites.sh 01-docker-services.sh 03-populate-cms-database.sh 04-cms-compilers.sh 04-docker-cms.sh)
+            %w(00-install-prerequisites.sh 01-install-compilers.sh 01-docker-services.sh 03-populate-cms-database.sh 04-cms-compilers.sh 04-docker-cms.sh)
         when 3 # Data
             %w(00-install-prerequisites.sh 01-docker-services.sh 02-docker-postgresql.sh 06-docker-rabbitmq.sh 07-docker-mongodb.sh)
         else
@@ -80,6 +80,23 @@ EOS
         provision_scripts.each do |script_name|
             node.vm.provision "shell", path: "scripts/#{script_name}", env: { DEFAULT_USER: "vagrant" }
         end
+
+        node.hostsupdater.aliases = ["lets-code.local"] if i == 1 && Vagrant.has_plugin?("vagrant-hostsupdater")
+    end
+  end
+
+  # vagrant-hostupdater plugin configurations
+  config.hostsupdater.remove_on_suspend = false if Vagrant.has_plugin?("vagrant-hostsupdater")
+
+  config.trigger.before :up do |trigger|
+    unless Vagrant.has_plugin?("vagrant-hostsupdater")
+        puts <<~MSG
+        WARNING:
+        If you are aiming to test cms-frontend using this environment you will
+        need either `vagrant-hostsupdater` plugin or manually add
+        `192.168.7.11 lets-code.local` to your machine's /etc/hosts file
+
+        MSG
     end
   end
 end

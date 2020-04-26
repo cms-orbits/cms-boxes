@@ -1,7 +1,7 @@
 version: '3'
 services:
   edge:
-    image: nginx:1.17
+    image: nginx:1.18.0-alpine
     volumes:
     - ./confs:/etc/nginx/conf.d:ro
     - ./static:/usr/share/nginx/html:ro
