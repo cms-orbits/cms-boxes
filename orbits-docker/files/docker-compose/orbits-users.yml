@@ -1,0 +1,22 @@
+version: '3'
+services:
+  orbits:
+    image: cmsorbits/cms-users:1.2
+    ports:
+      - "8081:8081"
+    environment:
+      - SERVER_PORT=8081
+      - CMS_DOMAIN=cms-orbtis.com
+      - CMS_PORT=8888
+      - CONTEST_SLUG=con_test
+      - SPRING_DB_ONE_DATASOURCE_USERNAME=cmsuser
+      - SPRING_DB_ONE_DATASOURCE_URL=jdbc:postgresql://postgres:5432/cmsdb
+      - SPRING_RABBITMQ_HOST=mongo
+      - SPRING_DB_ONE_DATASOURCE_PASSWORD=notsecure
+      - SPRING_RABBITMQ_USERNAME=cmsuser
+      - SPRING_RABBITMQ_PASSWORD=notsecure
+      - LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_SECURITY=INFO
+      # - SECURITY_GOOGLE_CLIENT_CLIENTID=
+      # - SECURITY_GOOGLE_CLIENT_CLIENTSECRET=
+      # - SECURITY_GITHUB_CLIENT_CLIENTID=
+      # - SECURITY_GITHUB_CLIENT_CLIENTSECRET=

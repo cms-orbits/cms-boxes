@@ -1,0 +1,9 @@
+version: '3'
+services:
+  cms:
+    image: cmsorbits/cms:20180130
+    command: cmsProxyService 0
+    network_mode: host
+    environment:
+      CMS_DB_PSWD: notsecure
+      CMS_DB_HOST: postgres

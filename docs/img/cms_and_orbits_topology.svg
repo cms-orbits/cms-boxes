@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg style="height:1029px;width:1967px" contentScriptType="application/ecmascript" contentStyleType="text/css" preserveAspectRatio="none" version="1.1" viewBox="0 0 1967 1029" xmlns="http://www.w3.org/2000/svg" zoomAndPan="magnify">
+<text x="828" y="16.708" fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="323">CMS Orbits Integartion Environment</text>
+<polygon points="22 54.953 32 44.953 895 44.953 895 661.95 885 671.95 22 671.95" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<line x1="885" x2="894" y1="54.953" y2="45.953" stroke="#000" stroke-width="1.5"/>
+<line x1="22" x2="885" y1="54.953" y2="54.953" stroke="#000" stroke-width="1.5"/>
+<line x1="885" x2="885" y1="54.953" y2="671.95" stroke="#000" stroke-width="1.5"/>
+<text x="435.5" y="70.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="38">«vm»</text>
+<text x="419.5" y="87.2451" fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="70">node001</text>
+<rect x="46" y="393.95" width="825" height="254" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="429" y="408.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="59">«group»</text>
+<text x="415" y="425.2451" fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="87">CMS Orbits</text>
+<polygon points="1126 355.95 1136 345.95 1945 345.95 1945 955.95 1935 965.95 1126 965.95" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<line x1="1935" x2="1944" y1="355.95" y2="346.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1126" x2="1935" y1="355.95" y2="355.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1935" x2="1935" y1="355.95" y2="965.95" stroke="#000" stroke-width="1.5"/>
+<text x="1512.5" y="371.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="38">«vm»</text>
+<text x="1496.5" y="388.2451" fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="70">node002</text>
+<rect x="1582" y="409.95" width="339" height="238" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="1665" y="424.9482" fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="173">Shared dependencies</text>
+<polygon points="77 714.95 87 704.95 1102 704.95 1102 1008 1092 1018 77 1018" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<line x1="1092" x2="1101" y1="714.95" y2="705.95" stroke="#000" stroke-width="1.5"/>
+<line x1="77" x2="1092" y1="714.95" y2="714.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1092" x2="1092" y1="714.95" y2="1018" stroke="#000" stroke-width="1.5"/>
+<text x="566.5" y="730.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="38">«vm»</text>
+<text x="550.5" y="747.2451" fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="70">node003</text>
+<polygon points="677 786.95 687 776.95 1070 776.95 1070 975.95 1060 985.95 677 985.95" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<line x1="1060" x2="1069" y1="786.95" y2="777.95" stroke="#000" stroke-width="1.5"/>
+<line x1="677" x2="1060" y1="786.95" y2="786.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1060" x2="1060" y1="786.95" y2="985.95" stroke="#000" stroke-width="1.5"/>
+<text x="828" y="802.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="823" y="819.2451" fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="93">PostgreSQL</text>
+<path d="m717 858.95c0-10 160.5-10 160.5-10s160.5 0 160.5 10v85c0 10-160.5 10-160.5 10s-160.5 0-160.5-10v-85" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<path d="m717 858.95c0 10 160.5 10 160.5 10s160.5 0 160.5-10" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="851" y="883.9482" fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="53">cmsDB</text>
+<polygon points="109 786.95 119 776.95 426 776.95 426 975.95 416 985.95 109 985.95" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<line x1="416" x2="425" y1="786.95" y2="777.95" stroke="#000" stroke-width="1.5"/>
+<line x1="109" x2="416" y1="786.95" y2="786.95" stroke="#000" stroke-width="1.5"/>
+<line x1="416" x2="416" y1="786.95" y2="985.95" stroke="#000" stroke-width="1.5"/>
+<text x="222" y="802.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="226.5" y="819.2451" fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="74">MongoDB</text>
+<path d="m149 858.95c0-10 122.5-10 122.5-10s122.5 0 122.5 10v85c0 10-122.5 10-122.5 10s-122.5 0-122.5-10v-85" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<path d="m149 858.95c0 10 122.5 10 122.5 10s122.5 0 122.5-10" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="238" y="883.9482" fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="67">orbitsDB</text>
+<polygon points="466 851.45 476 841.45 637 841.45 637 945.45 627 955.45 466 955.45" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<line x1="627" x2="636" y1="851.45" y2="842.45" stroke="#000" stroke-width="1.5"/>
+<line x1="466" x2="627" y1="851.45" y2="851.45" stroke="#000" stroke-width="1.5"/>
+<line x1="627" x2="627" y1="851.45" y2="955.45" stroke="#000" stroke-width="1.5"/>
+<text x="506" y="867.4482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="511.5" y="883.7451" fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="72">RabbitMB</text>
+<ellipse cx="604" cy="129.95" rx="8" ry="8" fill="#F8F8F8" stroke="#383838" stroke-width="2"/>
+<text x="579" y="159.9482" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="50">port 80</text>
+<polygon points="545 229.95 555 219.95 663 219.95 663 272.55 653 282.55 545 282.55" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="653" x2="662" y1="229.95" y2="220.95" stroke="#000" stroke-width="1.5"/>
+<line x1="545" x2="653" y1="229.95" y2="229.95" stroke="#000" stroke-width="1.5"/>
+<line x1="653" x2="653" y1="229.95" y2="282.55" stroke="#000" stroke-width="1.5"/>
+<text x="562" y="252.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="74">«cotainer»</text>
+<text x="560" y="269.2451" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="78">edge-nginx</text>
+<rect x="220.5" y="456.95" width="123" height="39.297" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<polygon points="326.5 461.95 326.5 475.95 338.5 475.95 338.5 467.95 332.5 461.95" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="332.5" x2="332.5" y1="461.95" y2="467.95" stroke="#000" stroke-width="1.5"/>
+<line x1="338.5" x2="332.5" y1="467.95" y2="467.95" stroke="#000" stroke-width="1.5"/>
+<text x="230.5" y="482.9482" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="93">cms-frontend</text>
+<polygon points="378.5 454.95 388.5 444.95 501.5 444.95 501.5 497.55 491.5 507.55 378.5 507.55" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="491.5" x2="500.5" y1="454.95" y2="445.95" stroke="#000" stroke-width="1.5"/>
+<line x1="378.5" x2="491.5" y1="454.95" y2="454.95" stroke="#000" stroke-width="1.5"/>
+<line x1="491.5" x2="491.5" y1="454.95" y2="507.55" stroke="#000" stroke-width="1.5"/>
+<text x="393.5" y="477.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="415" y="494.2451" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="40">Triton</text>
+<polygon points="421.5 578.95 431.5 568.95 544.5 568.95 544.5 621.55 534.5 631.55 421.5 631.55" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="534.5" x2="543.5" y1="578.95" y2="569.95" stroke="#000" stroke-width="1.5"/>
+<line x1="421.5" x2="534.5" y1="578.95" y2="578.95" stroke="#000" stroke-width="1.5"/>
+<line x1="534.5" x2="534.5" y1="578.95" y2="631.55" stroke="#000" stroke-width="1.5"/>
+<text x="436.5" y="601.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="452" y="618.2451" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="52">Galatea</text>
+<polygon points="695 454.95 705 444.95 855 444.95 855 497.55 845 507.55 695 507.55" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="845" x2="854" y1="454.95" y2="445.95" stroke="#000" stroke-width="1.5"/>
+<line x1="695" x2="845" y1="454.95" y2="454.95" stroke="#000" stroke-width="1.5"/>
+<line x1="845" x2="845" y1="454.95" y2="507.55" stroke="#000" stroke-width="1.5"/>
+<text x="728.5" y="477.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="710" y="494.2451" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="120">cms-users-admin</text>
+<polygon points="536.5 454.95 546.5 444.95 659.5 444.95 659.5 497.55 649.5 507.55 536.5 507.55" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="649.5" x2="658.5" y1="454.95" y2="445.95" stroke="#000" stroke-width="1.5"/>
+<line x1="536.5" x2="649.5" y1="454.95" y2="454.95" stroke="#000" stroke-width="1.5"/>
+<line x1="649.5" x2="649.5" y1="454.95" y2="507.55" stroke="#000" stroke-width="1.5"/>
+<text x="551.5" y="477.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="574" y="494.2451" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="38">Naiad</text>
+<polygon points="263.5 578.95 273.5 568.95 386.5 568.95 386.5 621.55 376.5 631.55 263.5 631.55" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="376.5" x2="385.5" y1="578.95" y2="569.95" stroke="#000" stroke-width="1.5"/>
+<line x1="263.5" x2="376.5" y1="578.95" y2="578.95" stroke="#000" stroke-width="1.5"/>
+<line x1="376.5" x2="376.5" y1="578.95" y2="631.55" stroke="#000" stroke-width="1.5"/>
+<text x="278.5" y="601.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="307" y="618.2451" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="26">Sao</text>
+<polygon points="62.5 454.95 72.5 444.95 185.5 444.95 185.5 497.55 175.5 507.55 62.5 507.55" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="175.5" x2="184.5" y1="454.95" y2="445.95" stroke="#000" stroke-width="1.5"/>
+<line x1="62.5" x2="175.5" y1="454.95" y2="454.95" stroke="#000" stroke-width="1.5"/>
+<line x1="175.5" x2="175.5" y1="454.95" y2="507.55" stroke="#000" stroke-width="1.5"/>
+<text x="77.5" y="477.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="101" y="494.2451" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="36">Neso</text>
+<polygon points="1141.5 454.95 1151.5 444.95 1328.5 444.95 1328.5 497.55 1318.5 507.55 1141.5 507.55" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="1318.5" x2="1327.5" y1="454.95" y2="445.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1141.5" x2="1318.5" y1="454.95" y2="454.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1318.5" x2="1318.5" y1="454.95" y2="507.55" stroke="#000" stroke-width="1.5"/>
+<text x="1188.5" y="477.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="1156.5" y="494.2451" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="147">cmsAdminWebServer</text>
+<polygon points="1363.5 454.95 1373.5 444.95 1562.5 444.95 1562.5 497.55 1552.5 507.55 1363.5 507.55" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="1552.5" x2="1561.5" y1="454.95" y2="445.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1363.5" x2="1552.5" y1="454.95" y2="454.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1552.5" x2="1552.5" y1="454.95" y2="507.55" stroke="#000" stroke-width="1.5"/>
+<text x="1416.5" y="477.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="1378.5" y="494.2451" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="159">cmsContestWebServer</text>
+<polygon points="1142.5 578.95 1152.5 568.95 1331.5 568.95 1331.5 621.55 1321.5 631.55 1142.5 631.55" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="1321.5" x2="1330.5" y1="578.95" y2="569.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1142.5" x2="1321.5" y1="578.95" y2="578.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1321.5" x2="1321.5" y1="578.95" y2="631.55" stroke="#000" stroke-width="1.5"/>
+<text x="1190.5" y="601.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="1157.5" y="618.2451" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="149">cmsEvaluationService</text>
+<polygon points="1366.5 578.95 1376.5 568.95 1537.5 568.95 1537.5 621.55 1527.5 631.55 1366.5 631.55" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="1527.5" x2="1536.5" y1="578.95" y2="569.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1366.5" x2="1527.5" y1="578.95" y2="578.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1527.5" x2="1527.5" y1="578.95" y2="631.55" stroke="#000" stroke-width="1.5"/>
+<text x="1405.5" y="601.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="1381.5" y="618.2451" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="131">cmsScoringService</text>
+<polygon points="1175.5 896.95 1185.5 886.95 1298.5 886.95 1298.5 939.55 1288.5 949.55 1175.5 949.55" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="1288.5" x2="1297.5" y1="896.95" y2="887.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1175.5" x2="1288.5" y1="896.95" y2="896.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1288.5" x2="1288.5" y1="896.95" y2="949.55" stroke="#000" stroke-width="1.5"/>
+<text x="1190.5" y="919.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="1193" y="936.2451" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="78">cmsWorker</text>
+<polygon points="1598 454.95 1608 444.95 1742 444.95 1742 497.55 1732 507.55 1598 507.55" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="1732" x2="1741" y1="454.95" y2="445.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1598" x2="1732" y1="454.95" y2="454.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1732" x2="1732" y1="454.95" y2="507.55" stroke="#000" stroke-width="1.5"/>
+<text x="1623.5" y="477.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="1613" y="494.2451" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="104">cmsLogService</text>
+<polygon points="1777.5 454.95 1787.5 444.95 1904.5 444.95 1904.5 497.55 1894.5 507.55 1777.5 507.55" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="1894.5" x2="1903.5" y1="454.95" y2="445.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1777.5" x2="1894.5" y1="454.95" y2="454.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1894.5" x2="1894.5" y1="454.95" y2="507.55" stroke="#000" stroke-width="1.5"/>
+<text x="1794.5" y="477.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="1792.5" y="494.2451" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87">cmsChecker</text>
+<polygon points="1598 578.95 1608 568.95 1784 568.95 1784 621.55 1774 631.55 1598 631.55" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="1774" x2="1783" y1="578.95" y2="569.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1598" x2="1774" y1="578.95" y2="578.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1774" x2="1774" y1="578.95" y2="631.55" stroke="#000" stroke-width="1.5"/>
+<text x="1644.5" y="601.9482" fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83">«container»</text>
+<text x="1613" y="618.2451" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="146">cmsResourceService</text>
+<rect x="910" y="898.95" width="112" height="39.297" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<polygon points="1005 903.95 1005 917.95 1017 917.95 1017 909.95 1011 903.95" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="1011" x2="1011" y1="903.95" y2="909.95" stroke="#000" stroke-width="1.5"/>
+<line x1="1017" x2="1011" y1="909.95" y2="909.95" stroke="#000" stroke-width="1.5"/>
+<text x="920" y="924.9482" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="82">cmsTables*</text>
+<rect x="733" y="898.95" width="142" height="39.297" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<polygon points="858 903.95 858 917.95 870 917.95 870 909.95 864 903.95" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="864" x2="864" y1="903.95" y2="909.95" stroke="#000" stroke-width="1.5"/>
+<line x1="870" x2="864" y1="909.95" y2="909.95" stroke="#000" stroke-width="1.5"/>
+<text x="743" y="924.9482" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="112">cmsOrbitsProfile</text>
+<path d="m281 905.45h92c5 0 5 13.148 5 13.148s0 13.148-5 13.148h-92c-5 0-5-13.148-5-13.148s0-13.148 5-13.148" fill="#F8F8F8" stroke="#383838" stroke-width="1.5"/>
+<path d="m373 905.45c-5 0-5 13.148-5 13.148 0 13.148 5 13.148 5 13.148" fill="none" stroke="#383838" stroke-width="1.5"/>
+<text x="281" y="923.4482" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="82">nesoQueue</text>
+<rect x="165" y="898.95" width="76" height="39.297" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<polygon points="224 903.95 224 917.95 236 917.95 236 909.95 230 903.95" fill="#F8F8F8" stroke="#000" stroke-width="1.5"/>
+<line x1="230" x2="230" y1="903.95" y2="909.95" stroke="#000" stroke-width="1.5"/>
+<line x1="236" x2="230" y1="909.95" y2="909.95" stroke="#000" stroke-width="1.5"/>
+<text x="175" y="924.9482" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="46">saoDB</text>
+<path d="m514 905.45h94c5 0 5 13.148 5 13.148s0 13.148-5 13.148h-94c-5 0-5-13.148-5-13.148s0-13.148 5-13.148" fill="#F8F8F8" stroke="#383838" stroke-width="1.5"/>
+<path d="m608 905.45c-5 0-5 13.148-5 13.148 0 13.148 5 13.148 5 13.148" fill="none" stroke="#383838" stroke-width="1.5"/>
+<text x="514" y="923.4482" fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="84">naiadQueue</text>
+<path d="m461.5 508.06v60.835" fill="none" stroke="#383838" stroke-dasharray="7.0,7.0"/>
+<path d="m382.5 508.06v60.835" fill="none" stroke="#383838" stroke-dasharray="7.0,7.0"/>
+<path d="m263.44 600.95h-146.44v153.17 14.529 7.2462" fill="none" stroke="#383838"/>
+<path d="m141.5 508.28v243.39 16.708 8.213" fill="none" stroke="#383838"/>
+<path d="m714 508.28v243.39 16.708 8.213" fill="none" stroke="#383838"/>
+<path d="m544.6 610.95h140.06v150.15 14.181" fill="none" stroke="#383838"/>
+<path d="m382.25 632.03v313.92h151.21 103.96 34.258 2.9325 1.3374 0.6357" fill="none" stroke="#383838"/>
+<path d="m578.75 508.15v251.8h-104.75v75.536 3.5976 1.7992" fill="none" stroke="#383838"/>
+<path d="m604 139.09v80.636" fill="none" stroke="#383838" stroke-dasharray="7.0,7.0"/>
+<path d="m544.79 261.95h-104.79v182.85" fill="none" stroke="#383838" stroke-dasharray="7.0,7.0"/>
+<text x="573" y="326.02" fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23">/api</text>
+<path d="m544.94 240.95h-262.94v215.83" fill="none" stroke="#383838" stroke-dasharray="7.0,7.0"/>
+<text x="405" y="326.02" fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="4">/</text>
+<path d="m1235.5 508.2v20.749h-550.17v190.19 35.824 17.624 4.3529" fill="none" stroke="#383838"/>
+<path d="m1423.5 508.04v40.911h-733v185 34.507 4.2593 2.1227" fill="none" stroke="#383838"/>
+<path d="m1142.5 589.95h-506.22v329h23.233 16.576 0.8641" fill="none" stroke="#383838"/>
+<path d="m1480.5 632.1v335.85h-397.58-9.3176" fill="none" stroke="#383838"/>
+<path d="m1175.4 941.95h-501.85v-23h1.599 1.6656 0.2325" fill="none" stroke="#383838"/>
+<path d="m1363.1 476.95h-15.58v124h-15.83" fill="none" stroke="#383838" stroke-dasharray="1.0,3.0"/>
+<path d="m1480.5 508.06v60.835" fill="none" stroke="#383838" stroke-dasharray="1.0,3.0"/>
+<path d="m1423.5 632.16v286.8h-124.92" fill="none" stroke="#383838" stroke-dasharray="1.0,3.0"/>
+<path d="m1237 632.11v254.82" fill="none" stroke="#383838" stroke-dasharray="1.0,3.0"/>
+<path d="m663.08 261.95h571.92v182.85" fill="none" stroke="#383838" stroke-dasharray="7.0,7.0"/>
+<text x="1006" y="326.02" fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="28">/aws</text>
+<path d="m663.04 240.95h799.96v203.74" fill="none" stroke="#383838" stroke-dasharray="7.0,7.0"/>
+<text x="1339" y="326.02" fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="27">/cws</text>
+</svg>

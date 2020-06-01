@@ -1,0 +1,10 @@
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:3.8
+    hostname: orbits-mq
+    ports:
+      - "5672:5672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=orbitsuser
+      - RABBITMQ_DEFAULT_PASS=notsecure

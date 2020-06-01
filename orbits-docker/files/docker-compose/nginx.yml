@@ -1,0 +1,12 @@
+version: '3'
+services:
+  edge:
+    image: nginx:1.18.0-alpine
+    volumes:
+    - ./confs:/etc/nginx/conf.d:ro
+    - ./static:/usr/share/nginx/html:ro
+    ports:
+    - "80:80"
+    extra_hosts:
+      - "orbits:192.168.7.11"
+      - "cms:192.168.7.12"

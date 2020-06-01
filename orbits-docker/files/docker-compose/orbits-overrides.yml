@@ -1,0 +1,9 @@
+# Specific overrides for current Vagrant deployment layout
+version: '3'
+services:
+  orbits:
+    extra_hosts:
+      - "postgres:192.168.7.13"
+      - "rabbit:192.168.7.13"
+      - "mongo:192.168.7.13"
+      - "cms:192.168.7.12"

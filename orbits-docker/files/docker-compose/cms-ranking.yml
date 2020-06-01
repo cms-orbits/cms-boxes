@@ -1,0 +1,6 @@
+version: '3'
+services:
+  cms:
+    image: cmsorbits/cms:20180130
+    command: cmsRankingWebServer
+    network_mode: host

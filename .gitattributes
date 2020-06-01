@@ -1,0 +1,3 @@
+*.sh text eol=lf
+*.plantuml text auto
+*.svg text auto

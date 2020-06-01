@@ -12,8 +12,8 @@ around the platform.
 In order to spin up a all-in-one CMS box you only need to:
 
 ```shell
-git clone https://github.com/jossemarGT/cms-boxes.git
-cd cms-boxes/ubuntu1604/bulky
+git clone https://github.com/cms-orbits/cms-boxes.git
+cd cms-boxes/bulky
 vagrant up
 ```
 
@@ -25,7 +25,7 @@ CMS services, its dependencies and some development tools are running inside
 the all-in-one virtual machine as systemd services each one using a specific
 port.
 
-![CMS all-in-one box topology](../../docs/img/cms_boxes_all_in_one_topology.png)
+![CMS all-in-one box topology](../docs/img/cms_boxes_all_in_one_topology.png)
 
 ## CMS
 
@@ -62,11 +62,11 @@ route arregement is:
 CMS Service | RPC Port | HTTP Port | NGINX route
 ---|---|---|---
 ContestWebServer | 21000 | 8888 | /
-AdminWebServer | 21100 | 8089 | /aws
+AdminWebServer | 21100 | 8889 | /aws
 RankingService | N/A | 8890 | /rws
 Checker | 22000 | N/A | N/A
 EvaluationService | 25000 | N/A | N/A
-PrintingService (disabled) | 25123 | N/A | N/A
+PrintingService | 25123 | N/A | N/A
 Worker | 26000 | N/A | N/A
 ResourceService |28000 | N/A | N/A
 ScoringService | 28500 | N/A | N/A
@@ -111,6 +111,6 @@ phppgadmin | PostgreSQL UI for development (Reachable through <http://192.168.7.
 ## Considerations
 
 The all in one configuration goes against the CMS-dev recommendations, mostly
-mixing Core services, workers and database hosts together. I opted to use this
-distribution for convenience and reverse engineering purposes (hack around
-:octocat:).
+mixing Core services, workers and database hosts together. This distribution was
+used for convenience and reverse engineering purposes (hack around :octocat:).
+

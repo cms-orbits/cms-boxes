@@ -1,0 +1,95 @@
+@startuml
+title CMS Orbits Integartion Environment
+
+skinparam monochrome true
+skinparam shadowing false
+skinparam linetype ortho
+
+node "node001" <<vm>> {
+    ' CMS Orbits Components
+    rectangle "CMS Orbits" <<group>> {
+        artifact "cms-frontend" as frontend
+        node Triton <<container>>
+        node Galatea <<container>>
+        node "cms-users-admin" as uadmin <<container>>
+        node Naiad <<container>>
+        node Sao <<container>>
+        node Neso <<container>>
+    }
+
+    Triton .. Galatea
+    Triton .. Sao
+    Sao -- MongoDB
+    Neso -- MongoDB
+    uadmin -- PostgreSQL
+    Galatea -- PostgreSQL
+    Sao -- PostgreSQL
+    Naiad -- RabbitMB
+
+    ' Development edge proxy
+    interface "port 80" as port80
+    node "edge-nginx" as edge <<cotainer>>
+
+    ' Public endpoints
+    port80 .. edge
+    edge .. Triton : /api
+    edge .. frontend : /
+}
+
+node "node002" <<vm>> {
+
+    ' CMS Components
+    node cmsAdminWebServer <<container>>
+    node cmsContestWebServer <<container>>
+    node cmsEvaluationService <<container>>
+    node cmsScoringService <<container>>
+    node cmsWorker <<container>>
+    ' node cmsRankingWebServer <<container>> ' Removed / un-used
+    ' node cmsPrintingService <<container>> ' Removed / un-used
+
+    rectangle "Shared dependencies" {
+        node cmsLogService <<container>>
+        node cmsChecker <<container>>
+        node cmsResourceService <<container>>
+        ' node cmsProxyService <<container>> ' Removed / un-used
+    }
+
+    ' CMS services Relationship
+    cmsAdminWebServer -- PostgreSQL
+    cmsContestWebServer -- PostgreSQL
+    cmsEvaluationService -- PostgreSQL
+    cmsScoringService -- PostgreSQL
+    cmsWorker -- PostgreSQL
+    cmsContestWebServer ~~ cmsEvaluationService
+    cmsContestWebServer ~~ cmsScoringService
+    cmsScoringService  ~~ cmsWorker
+    cmsEvaluationService  ~~ cmsWorker
+    ''' cmsLogService, cmsChecker, cmsResourceService and cmsProxyService skipt
+    ''' due visibility.
+
+    ' Edge server connection
+    edge .. cmsAdminWebServer : /aws
+    edge .. cmsContestWebServer : /cws
+}
+
+node "node003" <<vm>> {
+    ' Datastorage
+    node PostgreSQL <<container>> {
+        database cmsDB {
+            artifact "cmsTables*"
+            artifact cmsOrbitsProfile
+        }
+    }
+
+    node MongoDB <<container>> {
+        database orbitsDB {
+            queue nesoQueue
+            artifact saoDB
+        }
+    }
+
+    node RabbitMB <<container>> {
+        queue naiadQueue
+    }
+}
+@enduml

@@ -1,0 +1,11 @@
+version: '3'
+services:
+  postsgresql:
+    image: postgres:9.5
+    command:  postgres -c 'listen_addresses=*'
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: notsecure-admin
+    volumes:
+      - ./scripts:/docker-entrypoint-initdb.d
